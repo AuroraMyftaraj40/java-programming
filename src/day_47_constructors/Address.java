@@ -7,7 +7,16 @@ public class Address {
    private String zipCode = "22031";
    private String country = "USA";
 
-    @Override
+    //constructor(has no return type, has same name as class name
+    public Address() {
+        System.out.println("Address constructor.");
+        street="7745 Tiverton Dr";
+        city="Springfield";
+        state="VA";
+        zipCode="22152";
+        country="USA";
+}
+
     public String toString() {
         return street + ", " + city + ", " + state + " " + zipCode;
     }
