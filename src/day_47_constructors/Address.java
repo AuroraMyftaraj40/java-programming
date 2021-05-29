@@ -16,6 +16,10 @@ public class Address {
         zipCode="22152";
         country="USA";
 }
+public Address(String street, String city, String zipCode, String country) {
+
+
+}
 
     public String toString() {
         return street + ", " + city + ", " + state + " " + zipCode;
