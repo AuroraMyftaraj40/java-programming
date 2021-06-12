@@ -8,20 +8,24 @@ import java.util.Scanner;
 
 public class StringPractice {
     public static void main(String[] args) {
-        frequencyStr("AAABBCDD");
-    }
-    public static String frequencyStr(String str){
-        String nonDup= "", result = "";
-        for(int i=0; i<str.length(); i++){
-            if(!nonDup.contains("" + str.charAt(i))){
-                nonDup+=str.charAt(i);
+        String str= "AAABBCDD";
+        System.out.println(FrequencyOfChars(str) );
 
-                for(int j=0; j<nonDup.length(); j++){
-                    int num= Collections.frequency(Arrays.asList(str.split("")), ""+nonDup.charAt(j));
-                    result+= ""+nonDup.charAt(j) + num;
+    }
+    public static String FrequencyOfChars(String str){
+        int j= 0;
+
+        String expectedStr= "";
+        while(j<str.length() ){
+            int count= 0;
+            for (int i = 0; i <str.length() ; i++) {
+                if (str.charAt(i)==str.charAt(j) ){
+                    count++;
                 }
             }
+            expectedStr += ""+str.charAt(j)+ count;
+            str= str.replace(""+str.charAt(j) ,"") ;
         }
-        return result;
+        return expectedStr ;
     }
 }

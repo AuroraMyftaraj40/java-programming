@@ -1,6 +1,6 @@
 package OfficeHours.day_05_12_21;
 
-public class BankAccount {
+public class Account {
     String accountHolderName;
     int pin;
     double balance;
